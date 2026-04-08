@@ -1141,6 +1141,7 @@
         email:    email,
         servicio: document.getElementById('f-servicio').value || 'No seleccionado',
         mensaje:  document.getElementById('f-mensaje').value.trim() || '(sin mensaje)',
+        subject:  'Consulta de ' + nombre + ' — ' + (document.getElementById('f-servicio').value || 'Consulta general'),
       };
 
       emailjs.send('service_snssqo6', 'template_1267bhe', params)
