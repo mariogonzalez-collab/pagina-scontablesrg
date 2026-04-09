@@ -595,6 +595,194 @@
     .reveal.hidden { opacity: 0; transform: translateY(28px); }
     .reveal.hidden.visible { opacity: 1; transform: translateY(0); }
   </style>
+  <!-- ═══════════════════════════════════════════════════
+       Schema JSON-LD — Datos estructurados para Google
+       Permite rich snippets: estrellas, dirección, teléfono
+       ═══════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Servicios Contables R&G SPA",
+    "alternateName": "R&G Soluciones Contables",
+    "url": "https://www.scontablesrg.cl",
+    "logo": "https://www.scontablesrg.cl/Logo_de_R_G_Soluciones_Contables.png",
+    "description": "Servicios Contables R&G SPA ofrece contabilidad mensual, remuneraciones, declaraciones SII (F29/F22) y regularizaciones para PYMES y emprendedores en Chile. Atención remota en todo el país.",
+    "telephone": "+56944083611",
+    "email": "mario.gonzalez@scontablesrg.cl",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago",
+      "addressRegion": "Región Metropolitana",
+      "addressCountry": "CL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -33.4569,
+      "longitude": -70.6483
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Chile"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios Contables",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Contabilidad Mensual",
+            "description": "Registros, conciliaciones bancarias y reportes de resultado mensuales para PYMES y emprendedores en Chile."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Remuneraciones y Previred",
+            "description": "Cálculo de sueldos, cotizaciones previsionales y pago de Previred dentro del plazo legal."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Declaraciones SII — F29 y F22",
+            "description": "Declaración mensual de IVA (F29), renta anual (F22), rectificatorias y atención de notificaciones del SII."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Regularización de Atrasos SII",
+            "description": "Puesta al día de periodos atrasados y orden documental para empresas con deudas o atrasos en el SII."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Constitución de Empresas",
+            "description": "Asesoría para elegir la figura legal correcta (SPA, EIRL, SA) e inscribirla en el Registro de Empresas y Sociedades."
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "5"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Jonathan Ginder" },
+        "reviewBody": "Con mi servicio actual estoy tranquilo, sabiendo que realmente me siguen los pasos y tengo todo en orden."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Melany Acevedo" },
+        "reviewBody": "Con Soluciones Contables me puedo concentrar y enfocar en mi negocio, en la productividad y creatividad, dejando el resto en manos confiables para seguir creciendo."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Enzo Bustamante" },
+        "reviewBody": "Con Soluciones Contables me siento tranquilo: ellos cuidan mis números y yo cuido mi negocio."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Fabiola Rodriguez" },
+        "reviewBody": "Con Soluciones Contables puedes confiar que tu empresa está en buenas manos."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Gabriel Godoy" },
+        "reviewBody": "Muy buen servicio de Servicios Contables R&G SPA. Desde febrero de 2025 llevan la contabilidad de divermente.cl y ha sido una experiencia muy positiva. Siempre claros, ordenados y con excelente disposición para resolver dudas. Totalmente recomendados."
+      }
+    ],
+    "sameAs": [
+      "https://www.scontablesrg.cl"
+    ]
+  }
+  </script>
+
+  <!-- Schema FAQ — permite mostrar preguntas en los resultados de Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Trabajan sólo en Santiago?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Atendemos a todo Chile de forma 100% remota. Para reuniones presenciales en Santiago podemos coordinar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se define el valor mensual del servicio contable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Según el volumen de documentos, cantidad de trabajadores y complejidad del negocio. Presentamos una propuesta clara antes de comenzar, sin sorpresas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Pueden tomar mi contabilidad a mitad de año?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Hacemos una revisión del estado actual y dejamos todo ordenado para continuar sin fricciones desde el punto en que estés."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué incluye el onboarding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Revisión de tu situación tributaria, checklist de traspaso de información, solicitud de accesos y calendario de entregables del mes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo comunicarme cuando tengo dudas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, tendrás atención directa por WhatsApp y email. Respondemos en horas hábiles, lunes a viernes de 9:00 a 18:00."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Trabajan con empresas de cualquier rubro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Tenemos experiencia con comercio, servicios, gastronomía, salud, construcción y más rubros. Consulta tu caso específico."
+        }
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
 
