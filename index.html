@@ -42,7 +42,7 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -877,7 +877,7 @@
 <!-- NAV -->
 <nav>
   <a href="https://www.scontablesrg.cl/" class="nav-logo">
-    <div class="nav-logo-icon"><img src="/logo.png" alt="Logo R&G Servicios Contables SPA" /></div>
+    <div class="nav-logo-icon"><img src="/logo.png" alt="Logo R&G Servicios Contables SPA" fetchpriority="high" loading="eager" /></div>
     <div class="nav-logo-text">
       SERVICIOS CONTABLES R&amp;G SPA
       <span>Santiago, Chile</span>
@@ -1124,7 +1124,7 @@
 
     <div class="about-photo-wrap reveal">
       <div class="about-photo">
-          <img src="/mario.jpg" alt="Mario González — Fundador Servicios Contables R&G SPA" />
+          <img src="/mario.jpg" alt="Mario González — Fundador Servicios Contables R&G SPA" loading="lazy" />
         </div>
     </div>
 
@@ -1470,9 +1470,16 @@
   });
 
   // ── EmailJS — envío de formulario por correo ──────────────────
-  (function(){
-    emailjs.init({ publicKey: 'Ge7h4iePQSeEYVxSf' });
-  })();
+  function initEmailJS() {
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init({ publicKey: 'Ge7h4iePQSeEYVxSf' });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEmailJS);
+  } else {
+    initEmailJS();
+  }
 
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
