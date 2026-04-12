@@ -343,9 +343,10 @@
     .service-card {
       background: white; border-radius: var(--radius-lg);
       border: 1px solid var(--gray-100);
-      padding: 36px 32px;
+      padding: 36px 32px 28px;
       box-shadow: var(--shadow-card);
       transition: all .3s; position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
     }
     .service-card::before {
       content: '';
@@ -355,23 +356,19 @@
     }
     .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
     .service-card:hover::before { opacity: 1; }
-
-    .service-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px; font-weight: 900;
-      color: var(--gray-100); line-height: 1;
-      margin-bottom: 12px;
+    .service-desc { font-size: 14px; color: var(--gray-500); line-height: 1.7; flex: 1; }
+    .service-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      margin-top: 22px; padding: 9px 18px;
+      border-radius: 8px; font-size: 13px; font-weight: 600;
+      background: var(--blue-pale); color: var(--blue-mid);
+      text-decoration: none; border: 1px solid transparent;
+      transition: all .2s; align-self: flex-start;
     }
-    .service-icon-wrap {
-      width: 52px; height: 52px; border-radius: 14px;
-      background: var(--blue-pale);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 20px;
+    .service-cta:hover {
+      background: var(--blue-deep); color: white;
+      border-color: var(--blue-deep); transform: translateX(3px);
     }
-    .service-title {
-      font-size: 1.05rem; font-weight: 700; color: var(--blue-deep); margin-bottom: 10px;
-    }
-    .service-desc { font-size: 14px; color: var(--gray-500); line-height: 1.7; }
 
     /* ─── HOW ─── */
     .how { background: white; }
@@ -1058,31 +1055,37 @@
         <div class="service-icon-wrap">📒</div>
         <div class="service-title">Contabilidad Mensual</div>
         <div class="service-desc">Registro de ingresos y egresos, conciliación bancaria e informes de resultado en lenguaje simple para entender cómo va tu negocio.</div>
+        <a href="https://wa.me/56944083611?text=Hola%20Mario%2C%20me%20interesa%20cotizar%20Contabilidad%20mensual." target="_blank" rel="noopener" class="service-cta">Cotizar este servicio →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon-wrap">👥</div>
         <div class="service-title">Remuneraciones y Previred</div>
         <div class="service-desc">Cálculo de sueldos, cotizaciones previsionales, pago de Previred y finiquitos. Todo antes del plazo legal.</div>
+        <a href="https://wa.me/56944083611?text=Hola%20Mario%2C%20me%20interesa%20cotizar%20Remuneraciones%20y%20Previred." target="_blank" rel="noopener" class="service-cta">Cotizar este servicio →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon-wrap">🏛️</div>
         <div class="service-title">Impuestos SII (F29 y F22)</div>
         <div class="service-desc">Declaraciones mensuales de IVA, renta anual, rectificatorias y atención de notificaciones del Servicio de Impuestos Internos.</div>
+        <a href="https://wa.me/56944083611?text=Hola%20Mario%2C%20me%20interesa%20cotizar%20Declaraciones%20SII%20F29%20y%20F22." target="_blank" rel="noopener" class="service-cta">Cotizar este servicio →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon-wrap">🗂️</div>
         <div class="service-title">Regularizaciones</div>
         <div class="service-desc">¿Tienes meses atrasados? Sin juicios: revisamos tu situación, ordenamos la documentación y te ponemos al día.</div>
+        <a href="https://wa.me/56944083611?text=Hola%20Mario%2C%20necesito%20ayuda%20con%20Regularizaci%C3%B3n%20de%20atrasos%20SII." target="_blank" rel="noopener" class="service-cta">Cotizar este servicio →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon-wrap">🤝</div>
         <div class="service-title">Asesoría y Acompañamiento</div>
         <div class="service-desc">Soporte continuo por WhatsApp y videollamada para decisiones con impacto tributario. Respuesta en horas hábiles.</div>
+        <a href="https://wa.me/56944083611?text=Hola%20Mario%2C%20me%20interesa%20una%20Asesor%C3%ADa%20tributaria." target="_blank" rel="noopener" class="service-cta">Cotizar este servicio →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon-wrap">🏢</div>
         <div class="service-title">Constitución Societaria</div>
         <div class="service-desc">Te guiamos para elegir la figura legal correcta (SPA, EIRL, SA) e inscribirla en el Registro de Empresas y Sociedades.</div>
+        <a href="https://wa.me/56944083611?text=Hola%20Mario%2C%20me%20interesa%20cotizar%20Constituci%C3%B3n%20de%20empresa." target="_blank" rel="noopener" class="service-cta">Cotizar este servicio →</a>
       </div>
     </div>
   </div>
