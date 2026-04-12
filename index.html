@@ -398,6 +398,37 @@
     .step-text { font-size: 14px; color: var(--gray-500); line-height: 1.65; }
 
     /* ─── TESTIMONIALS ─── */
+    /* ─── SOBRE NOSOTROS ─── */
+    .about { background: var(--off-white); padding: 80px 5%; }
+    .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .about-photo-wrap { display: flex; justify-content: center; }
+    .about-photo {
+      width: 300px; height: 300px; border-radius: 50%;
+      background: var(--gray-100); border: 4px solid white;
+      box-shadow: 0 16px 48px rgba(10,31,68,.12);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; flex-shrink: 0;
+    }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .about-photo-placeholder {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      color: var(--gray-300); font-size: 13px; text-align: center; padding: 20px;
+    }
+    .about-photo-placeholder svg { width: 56px; height: 56px; fill: var(--gray-300); }
+    .about-content .section-label { color: var(--blue-bright); }
+    .about-name { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--blue-deep); margin: 8px 0 4px; }
+    .about-role { font-size: 14px; color: var(--blue-mid); font-weight: 500; margin-bottom: 20px; }
+    .about-bio { font-size: 15px; color: var(--gray-500); line-height: 1.8; margin-bottom: 24px; }
+    .about-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 28px; }
+    .about-stat { background: white; border-radius: var(--radius); padding: 16px; text-align: center; border: 1px solid var(--gray-100); }
+    .about-stat-num { font-size: 1.6rem; font-weight: 700; color: var(--blue-deep); }
+    .about-stat-lbl { font-size: 12px; color: var(--gray-500); margin-top: 3px; line-height: 1.3; }
+    @media (max-width: 860px) {
+      .about-inner { grid-template-columns: 1fr; gap: 36px; }
+      .about-photo { width: 220px; height: 220px; }
+      .about-stats { grid-template-columns: repeat(3,1fr); }
+    }
+
     .testimonials { background: var(--blue-deep); }
     .testimonials .section-title { color: white; }
     .testimonials .section-label { color: var(--blue-light); }
@@ -855,6 +886,7 @@
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+    <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
     <li><a href="#testimonios">Testimonios</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="/blog.html">Blog</a></li>
@@ -1083,6 +1115,46 @@
         <div class="step-text">Te olvidas de los impuestos y te enfocas en lo que más te gusta: hacer crecer tu negocio.</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section class="about" id="sobre-nosotros">
+  <div class="about-inner">
+
+    <div class="about-photo-wrap reveal">
+      <div class="about-photo">
+          <img src="/mario.jpg" alt="Mario González — Fundador Servicios Contables R&G SPA" />
+        </div>
+    </div>
+
+    <div class="about-content reveal">
+      <div class="section-label">Quién está detrás de R&G</div>
+      <div class="about-name">Mario González</div>
+      <div class="about-role">Contador · Fundador de Servicios Contables R&G SPA</div>
+      <p class="about-bio">Soy contador con experiencia en contabilidad para PYMES y emprendedores en Chile. Fundé R&G con una convicción simple: que cada dueño de negocio merece tener su contabilidad ordenada, entender sus números y contar con alguien de confianza que lo acompañe de verdad — no solo en los plazos del SII, sino en cada decisión que afecte su empresa.</p>
+      <p class="about-bio">A diferencia de las grandes empresas contables, cuando contratas R&G siempre hablas directamente conmigo. Conozco tu negocio, tu historial y tu situación. Sin intermediarios, sin demoras.</p>
+
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="about-stat-num">+5</div>
+          <div class="about-stat-lbl">Años de experiencia</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">100%</div>
+          <div class="about-stat-lbl">Atención directa y personal</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">Todo Chile</div>
+          <div class="about-stat-lbl">Atención remota</div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/56944083611?text=Hola%20Mario%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20R%26G." target="_blank" class="btn-primary" style="display:inline-flex;">
+        💬 Conversa directamente conmigo
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -1343,6 +1415,7 @@
         <div class="footer-col-title">Empresa</div>
         <ul>
           <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+          <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
           <li><a href="#testimonios">Testimonios</a></li>
           <li><a href="#faq">Preguntas frecuentes</a></li>
           <li><a href="/blog.html">Blog</a></li>
